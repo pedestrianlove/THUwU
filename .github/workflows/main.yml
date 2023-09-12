@@ -23,7 +23,7 @@ jobs:
       - name: "Execute the crawler"
         working-directory: ./crawler
         run: |
-          python crawler.py
+          scrapy crawl courses
     
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
