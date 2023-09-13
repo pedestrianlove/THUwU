@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-
       - name: "Install crawler's dependencies"
         run: |
           pip install Scrapy
@@ -25,7 +24,7 @@ jobs:
       - name: "Execute the crawler"
         working-directory: ./crawler
         run: |
-          scrapy crawl courses -O ../course-data/1121-data.json
+          scrapy crawl courses
     
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
