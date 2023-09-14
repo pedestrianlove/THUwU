@@ -16,9 +16,9 @@ const TIME_MAPPING = {
 	13: "21:20 ~ 22:10",
 }
 function compareTimeIdx(a, b) {
-	  return Number(a) > Number(b);
+	return parseFloat(a) - parseFloat(b);
 }
-c
+
 const TIME_IDX = Object.keys(TIME_MAPPING).sort(compareTimeIdx);
 
 const WEEK_MAPPING = {
